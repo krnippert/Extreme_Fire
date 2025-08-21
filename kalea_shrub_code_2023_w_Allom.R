@@ -1,3 +1,10 @@
+### Allometry code and shrub density from 2020 - 2023 ###
+### Authors: Kalea R. Nippert-Churchman and Zak Ratajczak ###
+### Last updated: 08/21/2025 ###
+### code used to convert stem diameters into woody plant allometric equations 
+### to look at changes in stem density, height, leaf area, etc. before and after an extreme fire in 2021 ###
+
+
 #loading packages
 library(dplyr)
 library(tidyr)
