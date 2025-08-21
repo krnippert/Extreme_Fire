@@ -1,4 +1,8 @@
-rm(list=ls())
+### Konza Prairie Biological Station Weather Data analysis for April 2021 ###
+### Authors: Kalea R. Nippert-Churchman and Zak Ratajczak ###
+### Last updated: 08/21/2025 ###
+### code used to look at weather conditions on two fire dates in april###
+
 
 setwd("C:/Users/kalea/OneDrive/Documents/Ratajczak_lab/2023_R_code")
 library(dplyr)

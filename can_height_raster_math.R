@@ -1,3 +1,9 @@
+### Lidar canopy data from KPBS for two watersheds from 2020 - 2024 ###
+### Authors: Kalea R. Nippert-Churchman and Zak Ratajczak ###
+### Last updated: 08/21/2025 ###
+### code used to determine effects of wildfire and prescribed fire on woody plant cover and density ###
+
+
 setwd("~/Ratajczak_lab/can_ht_shrub_code")
 library(raster)
 library(rpart)
