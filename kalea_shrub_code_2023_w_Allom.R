@@ -1,6 +1,6 @@
 ### Allometry code and shrub density from 2020 - 2023 ###
 ### Authors: Kalea R. Nippert-Churchman and Zak Ratajczak ###
-### Last updated: 08/21/2025 ###
+### Last updated: 02/03/2026 ###
 ### code used to convert stem diameters into woody plant allometric equations 
 ### to look at changes in stem density, height, leaf area, etc. before and after an extreme fire in 2021 ###
 
@@ -281,98 +281,88 @@ ggplot(plot_sum, aes(x=Year, y=tot_C_leaf, group=Watershed, colour=Watershed)) +
 plotsum5 = plot_sum%>%mutate(Watershed=as.factor(Watershed), Year=as.factor(Year))
 
 ###Stem count ANOVA and Tukey ############3
-aov1 = lm(stem_count~Watershed*Year, data=plotsum5)
-aov1
-aov3 = aov(stem_count~Watershed*Year, data=plotsum5)
-anova(aov1)
+aov1 = lmer(stem_count ~ Watershed*Year + (1 + Watershed | unq_plot), data = plotsum5)
 aov2 = anova(aov1)
-aov2
-summary(aov1)
-print(summary(aov3))
+print(aov2)
 
 resid = residuals(aov1)
 plotNormalHistogram(resid)
 plot(fitted(aov1), residuals(aov1))
 hist(resid)
 
-em1 = emmeans(aov3, list(pairwise ~ Watershed+Year+Watershed*Year), adjust = "tukey")
+em1 = emmeans(aov1, list(pairwise ~ Watershed+Year+Watershed*Year), adjust = "tukey")
 em1
 
-em1 = TukeyHSD(aov3)
+em1 = TukeyHSD(aov1)
 
 ########### BA anova and Tukey ############
-aov4 = lm(BA~Watershed*Year, data=plotsum5)
-aov4
-aov6 = aov(BA~Watershed*Year, data=plotsum5)
-anova(aov4)
-aov5 = anova(aov4)
-aov5
-summary(aov4)
-print(summary(aov6))
+#aov4 = lm(BA~Watershed*Year, data=plotsum5)
+#aov4
+#aov6 = aov(BA~Watershed*Year, data=plotsum5)
+#anova(aov4)
+##aov5 = anova(aov4)
+#aov5
+#summary(aov4)
+#print(summary(aov6))
 
-resid2 = residuals(aov4)
-plotNormalHistogram(resid)
-plot(fitted(aov4), residuals(aov4))
-hist(resid)
+#resid2 = residuals(aov4)
+#plotNormalHistogram(resid)
+#plot(fitted(aov4), residuals(aov4))
+#hist(resid)
 
-em2 = emmeans(aov6, list(pairwise ~ Watershed+Year+Watershed*Year), adjust="tukey")
-em2
+#em2 = emmeans(aov6, list(pairwise ~ Watershed+Year+Watershed*Year), adjust="tukey")
+#em2
 
 #### height ANOVA and Tukey ######
-aov7 = lm(avg_ht~Watershed*Year, data=plotsum5)
-aov7
-aov9 = aov(avg_ht~Watershed*Year, data=plotsum5)
-anova(aov7)
-aov8 = anova(aov7)
-aov8
-summary(aov7)
-print(summary(aov9))
+aov3 = lmer(avg_ht ~ Watershed*Year + (1 + Watershed | unq_plot), data = plotsum5)
+aov4 = anova(aov3)
+print(aov4)
 
-resid3 = residuals(aov7)
+resid = residuals(aov3)
 plotNormalHistogram(resid)
-plot(fitted(aov7), residuals(aov7))
+plot(fitted(aov3), residuals(aov3))
 hist(resid)
 
-em3 = emmeans(aov9, list(pairwise ~ Watershed+Year+Watershed*Year), adjust="tukey")
-em3
+em2 = emmeans(aov3, list(pairwise ~ Watershed+Year+Watershed*Year), adjust = "tukey")
+em2
+
+em2 = TukeyHSD(aov1)
 
 ##### leaf area ANOVA and Tukey #############
 
-aovA = lm(leaf_area~Watershed*Year, data=plotsum5)
-aovA
-aovC = aov(leaf_area~Watershed*Year, data=plotsum5)
-anova(aovA)
-aovB = anova(aovA)
-aovB
-summary(aovA)
-print(summary(aovC))
+aov5 = lmer(leaf_area ~ Watershed*Year + (1 + Watershed | unq_plot), data=plotsum5)
+aov5
+aov6 = anova(aov5)
 
-resid4 = residuals(aovA)
+summary(aov5)
+
+
+resid4 = residuals(aov5)
 plotNormalHistogram(resid)
-plot(fitted(aovA), residuals(aovA))
-hist(resid)
+plot(fitted(aov5), residuals(aov5))
+hist(resid4)
 
-em4 = emmeans(aovC, list(pairwise ~ Watershed+Year+Watershed*Year), adjust="tukey")
-em4
+em3 = emmeans(aov5, list(pairwise ~ Watershed+Year+Watershed*Year), adjust="tukey")
+em3
 
 #Bonferroni corrections########
 ### stem count #####
-bon1 = emmeans(aov3, list(pairwise ~ Watershed+Year+Watershed*Year), adjust = "bonferroni")
+bon1 = emmeans(aov1, list(pairwise ~ Watershed+Year+Watershed*Year), adjust = "bonferroni")
 bon1
 
 ###### basal area ##########
-bon2 = emmeans(aov6, list(pairwise~Watershed+Year+Watershed*Year), adjust = "bonferroni")
-bon2
+#bon2 = emmeans(aov, list(pairwise~Watershed+Year+Watershed*Year), adjust = "bonferroni")
+#bon2
 
 ##### height ######
-bon3 = emmeans(aov9, list(pairwise~Watershed+Year+Watershed*Year), adjust = "bonferroni")
+bon3 = emmeans(aov3, list(pairwise~Watershed+Year+Watershed*Year), adjust = "bonferroni")
 bon3
 
 #### leaf area ###########
-bon4 = emmeans(aovC, list(pairwise~Watershed+Year+Watershed*Year), adjust = "bonferroni")
+bon4 = emmeans(aov5, list(pairwise~Watershed+Year+Watershed*Year), adjust = "bonferroni")
 bon4
 
-### checking 2020 - 2022 data ##########
+## checking 2020 - 2022 data ##########
 #plotsum6 = filter(plotsum5, Year!=2023)
 
 #aov1 = lm(stem_count~Watershed*Year, data=plotsum6)
