@@ -1,0 +1,90 @@
+WPE021: Shrub diameter data
+DataCode: dataset code
+RecType: Record type
+RecYear: Year data was collected
+Watershed: Watershed where plots are located
+Plot_num: Plot number value between 1 and 24
+Transect_id: indicated which of the three transects the data was taken on, listed as A, B, or C.
+Species_code: species of individual that was measured (Cornus droumundii (CODR), Rhus glabra (RHGL), Prunus americana (PRAM), Rhus aromatica (RHAR), JUVI (juniperus virginiana), and Gleditsia tricanthos (GLTR)
+Diam: diameter of individual, measured in centimeters
+Transect_position: corresponds with subplot location along the transect, located every 2 meters. 
+
+WPE022: Shrub diameter meta data
+DataCode: dataset code
+RecType: Record type
+RecYear: Year data was collected
+Watershed: Watershed where plots are located
+Plot_num: Plot number value between 1 and 24
+North_deg: North degree value for the plot location
+North_min: North minute value for the plot location
+North_sec: North second value for the plot location
+East_deg: East degree value for the plot location
+East_min: East minute value for the plot location
+East_sec: East second value for the plot location
+Bear_transA: compass degree that indicates the start of transect A
+Bear_transB: compass degree that indicates the start of transect B
+Bear_transC: compass degree that indicates the start of transect C
+Latitude: Latitude value for each plot 
+Longitude: Longitude value for each plot
+Comments: Notes about changes to the previous data
+
+KFH01: Konza prairie fire history
+Watershed: Watershed name
+Hname: Historic watershed name
+Hectares: Burning area in hectares
+Acres: Burning area in acres
+Date: Date of burn
+Type: Fire type code (prescribed planned (PP), prescribed unplanned (PU), wildfire planned (WP), wildfire unplanned (WU))
+Year: Year of burn
+Code: Watershed Code
+Comments: Comments
+
+APT024: Precipitation data for each month in Manhattan, KS since 1891
+tmpyear: record year
+janprcp: precipitation in January
+febprcp: precipitation in February
+marprcp: precipitation in March
+aprprcp: precipitation in April
+mayprcp: precipitation in May
+junprcp: precipitation in June
+julprcp: precipitation in July
+augprcp: precipitation in August
+sepprcp: precipitation in September
+octprcp: precipitation in October
+novprcp: precipitation in November
+decprcp: precipitation in December
+annprcp: yearly average precipitation
+
+AWE011: hourly weather data for Konza 
+DataCode: dataset code
+RecType: record type
+RecYear: year of record
+RecMonth: month of record
+RecDay: day of record
+Watershed: Watershed
+RecHour: record hour
+Tair: air temperature (celcius)
+Rhum: relative humidity (percent)
+Wspeed: wind speed (m/s)
+Wdir: wind direction (degree)
+Srad: solar radiation (watt/m2)
+Stemp: soil temperature at 25 cm (celcius)
+Wmax: max wind speed (10 sec. execution interval) (m/s)
+
+
+woody_allometry_master:
+Stem_id: Stem id number
+Watershed: watershed
+Species: Species code for each individual
+Height_m: plant height in meters
+Diam_at_0pt5_cm: stem diameter at 0.5 m height on plant, measured in centimeters
+Diam_at_1pt3: stem diameter at 1.3 m height on plant, measured in centimeters
+Leaf_area_cm2: leaf area of individual, measured in cm2
+Leaf_mass_g: mass of leaves (grams)
+Stem_mass_g: mass of stems (grams)
+Flower_fruit_mass_g: mass of flowers and fruits (grams)
+Bag_size: size of bag used to collect plant
+notes: notes/comments
+Year: year of sample collection
+
+
