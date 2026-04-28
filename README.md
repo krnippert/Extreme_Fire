@@ -1,6 +1,5 @@
-High-intensity fire effects on woody plants
-
-Authors: K.R. Nippert-Churchman (1,2) and Z. Ratajczak (1)
+# High-intensity fire effects on woody plants
+## Authors: K.R. Nippert-Churchman (1,2) and Z. Ratajczak (1)
   1. Division of Biology, Kansas State University, Manhattan, KS 66506
   2. Department of Biology, University of North Carolina Greensboro, Greensboro, NC 27412
 
