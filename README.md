@@ -1,4 +1,4 @@
-# High-intensity fire effects on woody plants
+# High-intensity fire and long-term destocking causes top kill but fails to reverse encroachment and restore biodiversity.
 ## Authors: K.R. Nippert-Churchman<sup>1,2</sup> and Z. Ratajczak<sup>1</sup>
   1. Division of Biology, Kansas State University, Manhattan, KS 66506
   2. Department of Biology, University of North Carolina Greensboro, Greensboro, NC 27412
