@@ -12,7 +12,7 @@ This repository contains R scripts that analyze how high-intensity fires effect 
 The first R script, kalea_shrub_code_2023_w_Allom.R, looks at change in stem densities between both catchments using stem diameters and allometric data from sampled woody plants. This script utilized data from WPE021.csv, WPE022.csv, and woody_allometry_master.csv to understand how shrub height, stem density, and leaf area change after the 2021 fire events, and track recovery for two years post-fire. Note that WPE021 is the combined "shrub_counts" dataset on line 70.
 
 ## Remote sensing analysis:
-The second R script, can_height_raster_math.R, utilized LiDAR data collected by NEON to identify changes in shrub height and cover in both treatments after the 2021 fire events. This script uses the .tif files as well as the GIS032 and drainages_5msink_1000_8M_buffer folder to process lidar images to create maps of shrub height in watershed 4B (high-intensity fire) and K4A (low-intensity fire) from 2020-2024.
+The second R script, can_height_raster_math.R, utilized LiDAR data collected by NEON to identify changes in shrub height and cover in both treatments after the 2021 fire events. This script uses .tif files from https://data.neonscience.org/data-products/DP3.30015.001 as well as the GIS032 and drainages_5msink_1000_8M_buffer folder to process lidar images to create maps of shrub height in watershed 4B (high-intensity fire) and K4A (low-intensity fire) from 2020-2024.
 
 ## Weather conditions analysis:
 The final R script, weather data.R, analyzes and creates graphs of the weather conditions for the day of each fire event using APT024.csv, AWE011.csv, and KFH011.csv. The high-intensity fire occured on April 3, 2021, while the low-intensity fire occured on April 12, 2021.
