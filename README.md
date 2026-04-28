@@ -1,5 +1,5 @@
 # High-intensity fire effects on woody plants
-## Authors: K.R. Nippert-Churchman (1,2) and Z. Ratajczak (1)
+## Authors: K.R. Nippert-Churchman<sup>1,2</sup> and Z. Ratajczak<sup>1</sup>
   1. Division of Biology, Kansas State University, Manhattan, KS 66506
   2. Department of Biology, University of North Carolina Greensboro, Greensboro, NC 27412
 
