@@ -1,3 +1,4 @@
+DOI: https://doi.org/10.5281/zenodo.19863348
 # High-intensity fire and long-term destocking causes top kill but fails to reverse encroachment and restore biodiversity.
 ## Authors: K.R. Nippert-Churchman<sup>1,2</sup> and Z. Ratajczak<sup>1</sup>
   1. Division of Biology, Kansas State University, Manhattan, KS 66506
